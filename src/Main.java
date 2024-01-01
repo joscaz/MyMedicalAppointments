@@ -11,6 +11,8 @@ public class Main {
         System.out.println(myDoctor.name);
         System.out.println(myDoctor.speciality);
 
+        Patient patient = new Patient("Jose", "jose@mail.com");
+
     }
 
 }
