@@ -18,14 +18,11 @@ public class Main {
             System.out.println(aA.getDate() + " " + aA.getTime());
         }
 
-        System.out.println(myDoctor.name);
-        System.out.println(myDoctor.speciality);
+        System.out.println();
+        System.out.println();
+        Patient patient = new Patient("Alejandra", "ale@ale.com");
 
-        Patient patient = new Patient("Jose", "jose@mail.com");
-        patient.setWeight(54.6);
-        System.out.println(patient.getWeight());
-
-
+        System.out.println(patient);
     }
 
 }
