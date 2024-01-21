@@ -9,6 +9,12 @@ public class Nurse extends User{
 
     }
 
+    @Override
+    public void showDataUser(){
+        System.out.println("Empleado del hospital: Cruz Verde");
+        System.out.println("Departamentos: Nutriología, Pediatría");
+    }
+
     public String getSpecialty(){
         return specialty;
     }

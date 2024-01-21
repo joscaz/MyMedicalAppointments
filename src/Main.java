@@ -1,5 +1,4 @@
-import model.Doctor;
-import model.Patient;
+import model.*;
 
 import java.util.Date;
 
@@ -20,11 +19,38 @@ public class Main {
 //            System.out.println(aA.getDate() + " " + aA.getTime());
 //        }
 
-        System.out.println();
-        System.out.println();
-        Patient patient = new Patient("Alejandra", "ale@ale.com");
+        User user = new Doctor("Jose", "jose@gmail.com");
+        user.showDataUser();
 
-        System.out.println(patient);
+        User userPatient = new Patient("Jose", "jose@gmail.com");
+        userPatient.showDataUser();
+
+        //Clase anonima
+        User user1 = new User("Jose", "jose@a.com") {
+            @Override
+            public void showDataUser() {
+                System.out.println("Doctor");
+                System.out.println("Hospital: Cruz verde");
+                System.out.println("Departamento: Geriatría");
+            }
+        };
+
+        user1.showDataUser();
+
+        // Clase anonima
+        ISchedulable iSchedulable = new ISchedulable() {
+            @Override
+            public void schedule(Date date, String time) {
+
+            }
+        };
+
+
+//        System.out.println();
+//        System.out.println();
+//        Patient patient = new Patient("Alejandra", "ale@ale.com");
+//
+//        System.out.println(patient);
     }
 
 }
